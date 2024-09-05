@@ -45,7 +45,7 @@ export default class Posts extends Component {
     return (
       <div id="posts">
         {this.state.data.map((post) => (
-          <div id={"post_" + post.id}>
+          <div key={post.id} id={"post_" + post.id}>
             <p> {post.text} </p>
             <button onClick={() => this.setLike(post)}>
               {post.likesCount}
